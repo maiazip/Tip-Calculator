@@ -2,6 +2,7 @@
     --color--whites: #fefefe;
     --color--transparent: #4d4d4d31;
     --color--blacks: #151515;
+    --color--lime: rgb(179, 255, 117);
 }
 
 *,
@@ -21,7 +22,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color:#46001a;
+    background-color: #202020;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,20 +61,27 @@ main {
     flex-direction: row;
     border-radius: 2rem;
     overflow: hidden;
-    background-color: #1c000a;
+    background-color: var(--color--blacks);
     gap: 1rem;
     padding: 2rem;
+}
+
+.tipCalculator span {
+    color: var(--color--lime);
 }
 
 .tipCalculator input {
     height: 8%;
     width: 90%;
-    color: black;
+    color: var(--color--lime);
+    text-align: center;
+    background-color: #202020;
 }
 
 .tipCalculator input::placeholder {
     text-align: center;
     opacity: 70%;
+    color: var(--color--lime);
 }
 
 .calculate {
@@ -90,6 +98,14 @@ main {
 
 }
 
+.results span, p {
+    color: var(--color--blacks);
+}
+
+.tipResults span {
+    opacity: 50%;
+}
+
 .calculateBtns {
     display: flex;
     flex-direction: row;
@@ -103,8 +119,14 @@ main {
     padding: 0.5rem;
     width: 6rem;
     border-radius: 0.5rem;
-    background-color: #7e002f;
+    background-color: var(--color--lime);
     font-weight: bold;
+    color: var(--color--blacks);
+}
+
+.calculateBtns .active  { 
+    background-color: var(--color--transparent);
+    color: var(--color--lime);
 }
 
 .results {
@@ -115,12 +137,12 @@ main {
     width: 50%;
     height: 100%;
     border-radius: 1rem;
-    background-color: #620024;
+    background-color: var(--color--lime);
 }
 
 .results button {
-    background-color:#1c000a;
-    border-radius: 1rem;
+    background-color: var(--color--blacks);
+    border-radius: 0.5rem;
     padding: 1rem;
     width: 80%;
     height: 15%;
@@ -155,17 +177,13 @@ main {
     left: -6rem;
 } */
 
-.tipResults p {}
-.tipResults span {
-    color: rgba(199, 199, 199, 0.466)
-}
 .values {
     position: relative;
     top: -3.8rem;
     left: 6rem;
     font-weight: 900;
     font-size: 2rem;
-    color: #c00040;
+   
 }
 
 
