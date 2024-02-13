@@ -1,0 +1,221 @@
+:root {
+    --color--whites: #fefefe;
+    --color--transparent: #4d4d4d31;
+    --color--blacks: #151515;
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color--whites);
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color:#46001a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.title span {
+    margin-top: 0.5rem;
+}
+
+.tipCalculator {
+    width: 40%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: #1c000a;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.tipCalculator input {
+    height: 8%;
+    width: 90%;
+    color: black;
+}
+
+.tipCalculator input::placeholder {
+    text-align: center;
+    opacity: 70%;
+}
+
+.calculate {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1rem;
+
+    border-radius: 1rem;
+    /* background-color: var(--color--transparent); */
+
+}
+
+.calculateBtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 20rem;
+}
+.calculateBtns button  {
+    padding: 0.5rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    background-color: #7e002f;
+    font-weight: bold;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #620024;
+}
+
+.results button {
+    background-color:#1c000a;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 80%;
+    height: 15%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tipResults {
+    padding: 1rem;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+/* .results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #620024;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+} */
+
+/* .tipResults {
+    position: relative;
+    top: -2rem;
+    left: -6rem;
+} */
+
+.tipResults p {}
+.tipResults span {
+    color: rgba(199, 199, 199, 0.466)
+}
+.values {
+    position: relative;
+    top: -3.8rem;
+    left: 6rem;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #c00040;
+}
+
+
+
+
+.calculate img {
+    position: relative;
+    top: 4.5rem;
+    left: 0.5rem;
+}
+
+
+
+
+
+
+.credits {
+    background-color: var(--color--transparent);
+    width: 100vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 97vh;
+    color: var(--color--whites);
+
+}
+
+.credits a {
+    color: var(--color--whites);
+    font-weight: 600;
+}
+
+.credits a:hover {
+    cursor: pointer;
+    background-color: var(--color--whites);
+    color: var(--color--blacks);
+    border-radius: 0.5rem;
+}
+
+.credits button {
+  position: absolute;
+  right: 1rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.credits button:hover {
+  scale: 1.1;
+  transition: 0.4s;
+}

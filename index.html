@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>TipSplit</title>
+
+  <link rel="stylesheet" href="./src/css/index.css">
+
 </head>
+
 <body>
-teste
-  Bill
+  <main>
+    <h1 class="title">Spli <span style="display: block;">tter</span></h1>
+    <section class="tipCalculator">
+      <div class="calculate">
+        <img src="./src/assets/icons/icon-dollar.svg" alt="">
+        <span>Bill</span>
+        <input type="number" placeholder="Valor da conta">
+        <span>Select Tip %</span>
+        <div class="calculateBtns">
+          <button class="btnTipAmount">5%</button>
+          <button class="btnTipAmount">10%</button>
+          <button class="btnTipAmount">15%</button>
+          <button class="btnTipAmount">25%</button>
+          <button class="btnTipAmount">50%</button>
+          <button class="btnTipAmount">Custom</button>
+        </div>
+        <img src="./src/assets/icons/icon-person.svg" alt="">
+        <span>Number of People</span>
+        <input type="number" placeholder="Número de pessoas">
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
 
-  Number of People
 
-  Tip Amount
-  / person
+      <section class="results">
+        <div class="tipResults">
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
+        <span class="values">$00.00</span>
+        <div class="tipResults">
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <span class="values">$00.00</span>
 
-  Total
-  / person
+        <button>Reset</button>
+      </section>
+    </section>
+  </main>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+
+
+  <footer class="credits">
+    <span> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>.
+      <button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/btnclose.svg" alt=""></button>
+  </footer>
 </body>
+
 </html>
