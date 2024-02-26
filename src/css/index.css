@@ -2,7 +2,8 @@
     --color--whites: #fefefe;
     --color--transparent: #4d4d4d31;
     --color--blacks: #151515;
-    --color--lime: rgb(179, 255, 117);
+    --color--lime:  #ffea75;
+    --color--limes:  #b3ff75;
 }
 
 *,
@@ -14,7 +15,6 @@
     font-size: 100%;
     text-decoration: none;
     list-style: none;
-    color: var(--color--whites);
     box-sizing: border-box;
 }
 
@@ -27,8 +27,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 main {
@@ -46,10 +44,12 @@ main {
     letter-spacing: 1rem;
     text-transform: uppercase;
     margin: 1rem;
+    color: var(--color--lime);
 }
 
 .title span {
     margin-top: 0.5rem;
+    color: var(--color--lime);
 }
 
 .tipCalculator {
@@ -92,18 +92,7 @@ main {
     align-items: baseline;
     justify-content: center;
     gap: 1rem;
-
     border-radius: 1rem;
-    /* background-color: var(--color--transparent); */
-
-}
-
-.results span, p {
-    color: var(--color--blacks);
-}
-
-.tipResults span {
-    opacity: 50%;
 }
 
 .calculateBtns {
@@ -115,7 +104,8 @@ main {
     gap: 0.7rem;
     width: 20rem;
 }
-.calculateBtns button  {
+
+.calculateBtns button {
     padding: 0.5rem;
     width: 6rem;
     border-radius: 0.5rem;
@@ -124,9 +114,22 @@ main {
     color: var(--color--blacks);
 }
 
-.calculateBtns .active  { 
-    background-color: var(--color--transparent);
-    color: var(--color--lime);
+.calculateBtns input {
+    width: 6rem;
+    border-radius: 0.5rem;
+    background-color: var(--color--lime);
+    font-weight: bold;
+    color: var(--color--blacks);
+    height: 2rem;
+}
+
+.calculateBtns input::placeholder {
+    color: var(--color--blacks);
+    padding: 1rem;
+}
+
+.calculateBtns input.ctive {
+ color: red;
 }
 
 .results {
@@ -138,16 +141,23 @@ main {
     height: 100%;
     border-radius: 1rem;
     background-color: var(--color--lime);
+    overflow: hidden;
+}
+
+.results span,
+p {
+    color: var(--color--blacks);
 }
 
 .results button {
-    background-color: var(--color--blacks);
+    background-color: #202020;
     border-radius: 0.5rem;
     padding: 1rem;
     width: 80%;
     height: 15%;
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--color--lime);
 }
 
 .tipResults {
@@ -159,23 +169,11 @@ main {
     align-items: baseline;
     justify-content: center;
 }
-/* .results {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #620024;
-    height: 20rem;
-    width: 20rem;
-    border-radius: 1rem;
-    padding: 1rem;
-} */
 
-/* .tipResults {
-    position: relative;
-    top: -2rem;
-    left: -6rem;
-} */
+
+.tipResults span {
+    opacity: 50%;
+}
 
 .values {
     position: relative;
@@ -183,11 +181,7 @@ main {
     left: 6rem;
     font-weight: 900;
     font-size: 2rem;
-   
 }
-
-
-
 
 .calculate img {
     position: relative;
@@ -195,10 +189,10 @@ main {
     left: 0.5rem;
 }
 
-
-
-
-
+.btnPercent.active {
+    background-color: #303030;
+    color: var(--color--lime);
+}
 
 .credits {
     background-color: var(--color--transparent);
@@ -210,11 +204,10 @@ main {
     position: absolute;
     top: 97vh;
     color: var(--color--whites);
-
 }
 
 .credits a {
-    color: var(--color--whites);
+    color: var(--color--lime);
     font-weight: 600;
 }
 
@@ -226,14 +219,14 @@ main {
 }
 
 .credits button {
-  position: absolute;
-  right: 1rem;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
+    position: absolute;
+    right: 1rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .credits button:hover {
-  scale: 1.1;
-  transition: 0.4s;
+    scale: 1.1;
+    transition: 0.4s;
 }

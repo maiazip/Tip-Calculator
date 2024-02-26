@@ -21,19 +21,19 @@
       <div class="calculate">
         <img src="./src/assets/icons/icon-dollar.svg" alt="">
         <span>Bill</span>
-        <input type="number" placeholder="Valor da conta">
+        <input id="inputValue" type="number" placeholder="Valor da conta" maxlength="10">
         <span>Select Tip %</span>
         <div class="calculateBtns">
-          <button class="btnTipAmount">5%</button>
-          <button class="btnTipAmount">10%</button>
-          <button class="btnTipAmount">15%</button>
-          <button class="btnTipAmount">25%</button>
-          <button class="btnTipAmount">50%</button>
-          <button class="btnTipAmount active">Custom</button>
+          <button onclick="setPercentage(this)" class="btnPercent">5%</button>
+          <button onclick="setPercentage(this)" class="btnPercent">10%</button>
+          <button onclick="setPercentage(this)" class="btnPercent">15%</button>
+          <button onclick="setPercentage(this)" class="btnPercent">25%</button>
+          <button onclick="setPercentage(this)" class="btnPercent">50%</button>
+          <input type="number" placeholder="Custom" id="btnCustomPercent">
         </div>
         <img src="./src/assets/icons/icon-person.svg" alt="">
         <span>Number of People</span>
-        <input type="number" placeholder="Número de pessoas">
+        <input id="inputPeople" type="number" placeholder="Número de pessoas">
       </div>
 
 
@@ -43,14 +43,14 @@
           <p>Tip Amount</p>
           <span>/ person</span>
         </div>
-        <span class="values">$00.00</span>
+        <span id="spanTip" class="values">$00.00</span>
         <div class="tipResults">
           <p>Total</p>
           <span>/ person</span>
         </div>
-        <span class="values">$00.00</span>
+        <span id="spanValue" class="values">$00.00</span>
 
-        <button>Reset</button>
+        <button onclick="resetValues()" id="btnReset">Reset</button>
       </section>
     </section>
   </main>
@@ -61,9 +61,9 @@
   <footer class="credits">
     <span> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>.
-      <button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/btnclose.svg" alt=""></button>
+      <button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/icon-person.sv" alt=""></button>
   </footer>
-  <script src="./src/js/tipcalculator.js"></script>
+  <script src="./src/js/index.js"></script>
 </body>
 
 </html>
